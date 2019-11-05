@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Author from './components/Author'
+import Quote from './components/Quote'
+import Buttons from './components/Buttons'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Quote: "This is default Quote",
+      Author: "This is default Author"
+    }
+  }
+  
+  NewQuoteButtonHandler(event){
+    event.preventDefault();
+    
+
+}
+
+  render() {
+    return (
+      <div className="container-fluid">
+
+        <div className="quote-container">
+          <Quote> Print Quote instead from App.js </Quote>
+          
+        </div>
+
+        <div className="author-container">
+          <Author message='this author is part of JUST props'>
+            This Author is part of props.children 
+
+          </Author>
+        </div>
+
+
+        <div className="buttons-container">
+          <Buttons />
+        </div>
+
+      </div>
+
+    )
+  }
 }
 
 export default App;

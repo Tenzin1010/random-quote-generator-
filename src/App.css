@@ -1,22 +1,39 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container-fluid {
+  border: solid 2px green;
+  width: 50em;
+  margin: 50px;
+
+}
+
+.quote-container {
+  margin: 20px;
+  padding: 40px;
+  border: dotted 2px blue;
+}
+
+.author-container {
+  margin: 20px;
+  padding: 40px;
+  border: solid 1px red;
+}
+
+.buttons-container {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.btn {
+  padding: 5px;
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #09d3ac;
-}
+
+
