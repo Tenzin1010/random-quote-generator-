@@ -4,9 +4,9 @@ function Buttons(props) {
     
     const tweetUrl="https://twitter.com/intent/tweet?text=";
     return (
-        <div className="tweet-container">
+        <div>
             <a href={tweetUrl + props.children}>
-                <button className="tweet-btn">#tweet-quote</button>
+                <button class="btn btn-primary">#tweet-quote</button>
             </a>
         </div>
     )

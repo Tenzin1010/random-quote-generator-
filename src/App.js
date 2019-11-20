@@ -43,29 +43,37 @@ class App extends Component {
   render() {
     return (
     
-      <div className="container-fluid">
-
-        <div className="quote-container">
-          <Quote> {this.state.Quote}</Quote>
-        </div>
-
-        <div className="author-container">
-          <Author> {this.state.Author} </Author>
-        </div>
-
-        <div className="buttons-container">
-          <button className="quote-btn"
-            onClick={this.NewQuoteButtonHandler}
-          >
-            New Quote
-          </button>
-
-          <Buttons>
-            {this.state.Quote}
-            {this.state.Author}
-          </Buttons>
+      <div class="container border border-warning rounded">
         
+        <div class="row align-items-center" style={{height: "150px"}}>
+          <div class="col-lg">
+            <Quote> {this.state.Quote}</Quote>
+          </div>
         </div>
+        
+        <div class="row justify-content-end" style={{height: "50px"}}>
+          <div class="col-lg-4 col-md-4  align-self-end">
+            <Author> {this.state.Author} </Author>
+          </div>
+        </div> 
+        
+        <div class="row justify-content-center" style={{height: "50px"}}>
+
+          <div class="col-lg-2 col-md-3 col-sm">
+            <button class="btn btn-primary"
+              onClick={this.NewQuoteButtonHandler}
+            >
+            New Quote
+            </button>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm" >
+            <Buttons>
+              {this.state.Quote}
+              {this.state.Author}
+            </Buttons>
+          </div>
+        </div> 
 
       </div>
 
@@ -74,3 +82,28 @@ class App extends Component {
 }
 
 export default App;
+{/* <div className="container-fluid"> 
+
+<div className="quote-container">
+  <Quote> {this.state.Quote}</Quote>
+</div>
+
+<div className="author-container">
+  <Author> {this.state.Author} </Author>
+</div>
+
+<div className="buttons-container">
+  <button className="quote-btn"
+    onClick={this.NewQuoteButtonHandler}
+  >
+    New Quote
+  </button>
+
+  <Buttons>
+    {this.state.Quote}
+    {this.state.Author}
+  </Buttons>
+
+</div>
+
+</div> */}
